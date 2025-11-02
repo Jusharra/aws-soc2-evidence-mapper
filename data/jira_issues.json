@@ -1,0 +1,19 @@
+[
+  {
+    "key": "SEC-42",
+    "summary": "Q3 Access Review Completed",
+    "status": "Done",
+    "approved_by": [
+      "CISO",
+      "IT Director"
+    ]
+  },
+  {
+    "key": "SEC-77",
+    "summary": "Patch rollout - September",
+    "status": "In Review",
+    "approved_by": [
+      "Ops Lead"
+    ]
+  }
+]

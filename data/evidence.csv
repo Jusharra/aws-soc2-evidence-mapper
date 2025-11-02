@@ -1,0 +1,6 @@
+evidence_id,source,description,last_updated,uri
+EV-001,SecurityHub,"Weekly Security Hub export with control summaries",2025-10-24,s3://your-bucket/securityhub/weekly.json
+EV-002,AWSConfig,"Config aggregator conformance pack results for CIS v1.4",2025-09-16,s3://your-bucket/config/cis-pack.json
+EV-003,Jira,"Jira tickets for quarterly access review approvals",2025-08-12,"https://jira.example.com/browse/SEC-42"
+EV-004,CloudWatch,"Dashboard screenshot & metrics export for API latency",2025-10-29,s3://your-bucket/cloudwatch/latency.csv
+EV-005,CodeRepo,"PR reviews & change logs for main infrastructure repo",2025-10-19,"https://github.com/org/iac/pulls"

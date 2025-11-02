@@ -1,0 +1,62 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'SOC2 Evidence Agent: S3, IAM Role, and Lambda shell (upload code separately)'
+Parameters:
+  DataBucketName:
+    Type: String
+    Description: S3 bucket name to store controls/evidence/reports
+
+Resources:
+  DataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref DataBucketName
+      VersioningConfiguration:
+        Status: Enabled
+
+  LambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: { Service: [lambda.amazonaws.com] }
+            Action: ['sts:AssumeRole']
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: S3Access
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: ['s3:GetObject','s3:PutObject']
+                Resource: ['arn:aws:s3:::*']
+
+  EvidenceMapperLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: soc2-evidence-mapper
+      Handler: evidence_mapper.handler
+      Runtime: python3.12
+      Role: !GetAtt LambdaRole.Arn
+      Timeout: 60
+      Environment:
+        Variables:
+          DATA_BUCKET: !Ref DataBucketName
+          CONTROLS_KEY: data/controls.csv
+          EVIDENCE_KEY: data/evidence.csv
+          OUTPUT_KEY: reports/latest_report.json
+      Code:
+        ZipFile: |
+          # Placeholder. After stack creation, update the function's code
+          # with the lambda/evidence_mapper.py from the repo.
+          def handler(event, context):
+              return {"status": "placeholder"}
+Outputs:
+  BucketName:
+    Value: !Ref DataBucketName
+    Description: S3 bucket for data and reports
+  LambdaName:
+    Value: !Ref EvidenceMapperLambda
+    Description: Name of the Lambda function

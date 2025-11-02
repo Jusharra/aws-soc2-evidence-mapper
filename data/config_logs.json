@@ -1,0 +1,18 @@
+{
+  "config_pack": "CIS-1.4",
+  "run_date": "2025-10-31",
+  "non_compliant_rules": [
+    {
+      "rule": "restricted-ssh",
+      "resources": 2
+    },
+    {
+      "rule": "cloudtrail-enabled",
+      "resources": 0
+    },
+    {
+      "rule": "s3-bucket-logging-enabled",
+      "resources": 1
+    }
+  ]
+}

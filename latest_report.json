@@ -1,0 +1,27 @@
+{
+  "generated_at": "2025-11-02T05:56:00.223738Z",
+  "policy": "SOC 2 demo subset",
+  "summary": [
+    {
+      "control_id": "CC6.1",
+      "status": "FAIL",
+      "ok_evidence": 0,
+      "drift_evidence": 1,
+      "total_evidence": 1
+    },
+    {
+      "control_id": "CC7.2",
+      "status": "PASS",
+      "ok_evidence": 1,
+      "drift_evidence": 0,
+      "total_evidence": 1
+    },
+    {
+      "control_id": "CC8.1",
+      "status": "PASS",
+      "ok_evidence": 1,
+      "drift_evidence": 0,
+      "total_evidence": 1
+    }
+  ]
+}

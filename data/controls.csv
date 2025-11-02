@@ -1,0 +1,6 @@
+control_id,trust_service,control_name,control_description,keywords,max_evidence_age_days
+CC1.1,Security,Control Environment,"The entity demonstrates a commitment to integrity and ethical values.",code of conduct;ethics;training,365
+CC6.1,Security,Logical Access,"Logical access security software, infrastructure, and architectures are implemented.",iam;identity center;access review;least privilege,30
+CC6.6,Security,Change Management,"Changes to infrastructure, data, software are authorized, tested, approved, and documented.",change management;git;pull request;code review,30
+CC7.2,Security,Vulnerability Management,"Vulnerabilities are identified, assessed, and remediated in a timely manner.",vulnerability;patch;security hub;inspector,30
+CC8.1,Availability,Monitoring,"System components are monitored for capacity and performance.",cloudwatch;metrics;alarms;dashboards,30
