@@ -1,7 +1,7 @@
 SOC 2 Auditor AI Agent — System Design & Control Mapping Logic
 
 Version: 1.0
-Author: Dr. Goree
+Author: Quashaya Goree
 Date: {{today’s date}}
 Repository: GitHub
 
