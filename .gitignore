@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+venv/
+.venv/
+
+# Streamlit cache
+.streamlit/
+.cache/
+
+# AWS credentials
+*.pem
+*.key
+*.aws/
+.aws/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports & local data
+*.csv
+*.json
+*.xlsx
+*.db
