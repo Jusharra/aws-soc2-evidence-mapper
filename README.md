@@ -54,5 +54,6 @@ Evidence older than `max_evidence_age_days` on a control is flagged as **drift**
 - Add **Amazon Q / MCP server** to expose an Agent API for auditors
 
 ---
-
+Notion Step-by-step Guide: https://www.notion.so/Project-1-AWS-SOC-2-Evidence-Collection-Auditor-AI-Agent-29df54e7005c80c695e5fa379f1d02cd?source=copy_link
+Streamlit Demo: https://aws-soc2-evidence-mapper.streamlit.app/
 © 2025 Demo Lab
